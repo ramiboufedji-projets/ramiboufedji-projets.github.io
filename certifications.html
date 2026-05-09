@@ -1,0 +1,77 @@
+---
+layout: default
+title: Certifications
+permalink: /certifications/
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Certifications</p>
+    <h1>Certifications, MOOC et formations complémentaires</h1>
+    <p>
+      Cette page regroupe mes certifications, formations en ligne, MOOC et apprentissages
+      complémentaires liés à la CFD, la simulation numérique, les transferts thermiques,
+      la programmation scientifique et les outils d’ingénierie.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="certifications-grid">
+      {% for cert in site.data.certifications %}
+        <article class="cert-card">
+
+          <div class="cert-header">
+            <div class="cert-logo">
+              {% if cert.logo and cert.logo != "" %}
+                <img src="{{ cert.logo | relative_url }}" alt="{{ cert.provider }}">
+              {% else %}
+                <span>{{ cert.provider | slice: 0 }}</span>
+              {% endif %}
+            </div>
+
+            <div>
+              <span class="cert-type cert-type-{{ cert.type_key }}">
+                {{ cert.type }}
+              </span>
+
+              <h2>{{ cert.title }}</h2>
+
+              <p class="cert-provider">
+                {{ cert.provider }} · {{ cert.date }}
+              </p>
+            </div>
+          </div>
+
+          <p class="cert-description">
+            {{ cert.description }}
+          </p>
+
+          <div class="cert-footer">
+            <span class="cert-status cert-status-{{ cert.status_key }}">
+              {{ cert.status }}
+            </span>
+
+            {% if cert.credential_url and cert.credential_url != "" %}
+              <a class="cert-link" href="{{ cert.credential_url }}" target="_blank" rel="noopener">
+                Voir le certificat →
+              </a>
+            {% endif %}
+          </div>
+
+          {% if cert.skills %}
+            <div class="tag-list compact">
+              {% for skill in cert.skills %}
+                <span class="tag">{{ skill }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
