@@ -1,21 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Portfolio CFD</title>
-</head>
+---
+layout: default
+title: Accueil
+---
 
-<body>
+{% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
 
-<h1>Mon Portfolio CFD</h1>
+<section class="hero">
+  <div class="container hero-grid">
 
-<h2>Échangeur de chaleur coaxial</h2>
-<p>
-Modélisation et simulation thermique pour étudier l’influence du débit et du coefficient d’échange.
-</p>
+    <div class="hero-content">
+      <p class="eyebrow">Portfolio Ingénieur CFD</p>
 
-<a href="https://github.com/ramiboufedji-projets/coaxial-heat-exchanger-simulation">
-Voir mon projet sur GitHub
-</a>
+      <h1>
+        {{ site.data.profile.first_name }} {{ site.data.profile.last_name }}
+      </h1>
 
-</body>
-</html>
+      <h2>{{ site.data.profile.role }}</h2>
+
+      <p class="hero-text">
+        {{ site.data.profile.headline }}
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="{{ '/projects/' | relative_url }}">Voir les projets</a>
+        <a class="button secondary" href="{{ site.data.profile.cv | relative_url }}">Télécharger le CV</a>
+      </div>
+
+      <div class="hero-highlights">
+        {% for item in site.data.profile.highlights %}
+          <span>{{ item }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero-profile-card">
+      <div class="profile-photo">
+        <img src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.first_name }} {{ site.data.profile.last_name }}">
+      </div>
+
+      <div class="profile-card-content">
+        <p class="profile-name">{{ site.data.profile.first_name }} {{ site.data.profile.last_name }}</p>
+        <p>{{ site.data.profile.role }}</p>
+        <p>{{ site.data.profile.location }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section profile-preview">
+  <div class="container narrow">
+    <p class="eyebrow">Profil</p>
+    <h2>Analyser, simuler et interpréter les écoulements avec une approche d’ingénieur.</h2>
+    <p>
+      {{ site.data.profile.summary }}
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading row">
+      <div>
+        <p class="eyebrow">Projets sélectionnés</p>
+        <h2>Études CFD mises en avant</h2>
+        <p>
+          Une sélection de projets de simulation numérique axés sur la méthodologie,
+          les choix de modélisation et l’interprétation des résultats.
+        </p>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-button" data-carousel-prev aria-label="Projet précédent">←</button>
+        <button class="carousel-button" data-carousel-next aria-label="Projet suivant">→</button>
+      </div>
+    </div>
+
+    <div class="project-carousel" data-carousel-track>
+      {% for project in featured_projects %}
+        {% include project-card.html project=project extra_class="carousel-item" %}
+      {% endfor %}
+    </div>
+
+    <div class="section-link">
+      <a href="{{ '/projects/' | relative_url }}">Voir tous les projets →</a>
+    </div>
+
+  </div>
+</section>
+
+{% include skills-section.html %}
+
+{% include tools-section.html %}
+
+<section class="section contact-cta">
+  <div class="container narrow">
+    <p class="eyebrow">Contact</p>
+    <h2>Ouvert aux opportunités en CFD, simulation numérique et analyse d’ingénierie.</h2>
+    <p>
+      Vous pouvez me contacter pour des opportunités d’emploi, de stage,
+      de projet CFD ou pour échanger autour de la simulation numérique.
+    </p>
+
+    <div class="hero-actions centered">
+      <a class="button primary" href="mailto:{{ site.data.profile.email }}">Me contacter</a>
+      <a class="button secondary" href="{{ site.data.profile.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
