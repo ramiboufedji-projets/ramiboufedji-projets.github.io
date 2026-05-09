@@ -488,23 +488,93 @@ main {
   align-items: flex-start;
 }
 
+.tool-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035)),
+    var(--bg-card);
+  border-radius: var(--radius);
+  padding: 24px;
+
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.5);
+  background:
+    linear-gradient(180deg, rgba(56, 189, 248, 0.11), rgba(255, 255, 255, 0.04)),
+    var(--bg-card);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
 .tool-logo {
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--line);
-  color: var(--accent);
-  font-weight: 900;
+  width: 104px;
+  height: 70px;
+  flex: 0 0 104px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, #ffffff, #f3f4f6);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(15, 23, 42, 0.06);
+
+  padding: 10px;
+  overflow: hidden;
 }
 
 .tool-logo img {
-  width: 30px;
-  height: 30px;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 84px;
+  max-height: 48px;
+
   object-fit: contain;
+  object-position: center;
+}
+
+.tool-logo span {
+  color: #0b1120;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.tool-card h3 {
+  margin: 0 0 4px;
+  color: var(--text);
+}
+
+.tool-card p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.tool-category {
+  color: var(--accent) !important;
+  margin-bottom: 8px !important;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .tool-category {
@@ -867,5 +937,22 @@ main {
 @media (max-width: 900px) {
   .project-hero-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tool-card {
+    align-items: flex-start;
+  }
+
+  .tool-logo {
+    width: 92px;
+    height: 64px;
+    flex: 0 0 92px;
+  }
+
+  .tool-logo img {
+    max-width: 74px;
+    max-height: 42px;
   }
 }
