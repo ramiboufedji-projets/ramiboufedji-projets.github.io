@@ -1,50 +1,59 @@
 - name: "ANSYS Fluent"
   category: "Solveur CFD"
-  logo: "assets/images/logos/ANSS_BIG.png"
+  logo: "/assets/images/logos/ANSS_BIG.png"
   level: "Simulation CFD, modélisation de la turbulence et post-traitement"
 
 - name: "OpenFOAM"
   category: "Solveur CFD"
-  logo: "assets/images/logos/openfoam-seeklogo.png"
+  logo: "/assets/images/logos/openfoam-seeklogo.png"
   level: "Configuration de cas, paramétrage solveur et études paramétriques"
 
 - name: "ParaView"
   category: "Post-traitement"
-  logo: "assets/images/logos/Paraview logo_wo_back.PNG"
+  logo: "/assets/images/logos/Paraview logo_wo_back.PNG"
   level: "Visualisation des écoulements, contours, lignes de courant et analyse des résultats"
 
 - name: "Python"
   category: "Programmation"
-  logo: "assets/images/logos/pngaaa.com-619137.png"
+  logo: "/assets/images/logos/pngaaa.com-619137.png"
   level: "Analyse de données, automatisation, tracés et post-traitement"
 
 - name: "MATLAB"
   category: "Programmation"
-  logo: "assets/images/logos/ma7737m046-matlab-logo-matlab-logo-.png"
+  logo: "/assets/images/logos/ma7737m046-matlab-logo-matlab-logo-.png"
   level: "Analyse numérique, visualisation de données et calculs d’ingénierie"
 
 - name: "SolidWorks"
   category: "CAO"
-  logo: "assets/images/logos/so5690sa00-solidworks-logo-solidworks-logo-imagine-draughting.png"
+  logo: "/assets/images/logos/so5690sa00-solidworks-logo-solidworks-logo-imagine-draughting.png"
   level: "Préparation de géométries et modélisation CAO"
-
 
 - name: "GitHub"
   category: "Versioning"
-  logo: "assets/images/logos/GitHub_(4).png"
+  logo: "/assets/images/logos/GitHub_(4).png"
   level: "Organisation, documentation et suivi des projets"
 
-  - name: "Fortran"
+- name: "Fortran"
   category: "Programmation scientifique"
-  logo: "assets/images/logos/Fortran_logo.svg"
+  logo: "/assets/images/logos/Fortran_logo.svg"
   level: "Développement de codes de calcul, résolution numérique et algorithmique scientifique"
 
 - name: "SALOME"
   category: "Pré-traitement / Maillage"
-  logo: "assets/images/logos/salome.png"
+  logo: "/assets/images/logos/salome.png"
   level: "Préparation géométrique, génération de maillages et workflows de simulation numérique"
-  
+
 - name: "Linux"
   category: "Environnement de calcul"
   logo: "/assets/images/logos/linux.png"
-  level: "Utilisation d’environnements Unix/Linux pour le calcul scientifique, l’exécution de simulations, l’organisation de scripts et les workflows HPC"
+  level: "Utilisation d’environnements Unix/Linux pour le calcul scientifique, l’exécution de simulations, l’organisation de scripts et les workflows CFD/HPC"
+
+- name: "COMSOL Multiphysics"
+  category: "Simulation multiphysique"
+  logo: "/assets/images/logos/comsol.png"
+  level: "Simulation par éléments finis, milieux poreux, acoustique, diffusion, thermique et transferts couplés"
+
+- name: "Basilisk CFD"
+  category: "Solveur CFD open-source"
+  logo: "/assets/images/logos/basilisk.png"
+  level: "Simulation multiphasique, DNS, méthode VOF, interfaces mobiles et changement de phase"
