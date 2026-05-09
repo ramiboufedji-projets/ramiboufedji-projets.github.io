@@ -43,3 +43,8 @@
   category: "Pré-traitement / Maillage"
   logo: "assets/images/logos/salome.png"
   level: "Préparation géométrique, génération de maillages et workflows de simulation numérique"
+  
+- name: "Linux"
+  category: "Environnement de calcul"
+  logo: "/assets/images/logos/linux.png"
+  level: "Utilisation d’environnements Unix/Linux pour le calcul scientifique, l’exécution de simulations, l’organisation de scripts et les workflows HPC"
