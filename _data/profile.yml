@@ -1,7 +1,7 @@
-first_name: "Rami"
-last_name: "Boufedji"
-role: "Ingénieur CFD"
-headline: "Simulation numérique, mécanique des fluides, transfert thermique et analyse d'ingénierie."
+first_name: "Rachid Rami"
+last_name: "BOUFEDJI"
+role: "Ingénieur mécanique des fluides / CFD"
+headline: "Ingénieur en génie hydraulique, spécialisé en modélisation CFD, mécanique des fluides, transferts thermiques et simulation numérique."
 
 location: "France"
 photo: "/assets/images/profile.jpg"
@@ -12,14 +12,22 @@ linkedin: "https://www.linkedin.com/in/rachid-rami-boufedji-529886209/"
 github: "https://github.com/ramiboufedji-projets"
 
 summary: >
-  Je suis ingénieur CFD, avec un intérêt particulier pour la simulation numérique,
-  la mécanique des fluides, le transfert thermique et la résolution de problèmes
-  d'ingénierie. Ce portfolio présente une sélection de projets CFD mettant en avant
-  la méthodologie, les choix de modélisation, l'interprétation des résultats et la
-  communication technique.
+  Ingénieur en génie hydraulique de formation, j’ai orienté mon parcours vers la
+  mécanique des fluides numérique afin de me spécialiser en CFD, simulation multiphysique
+  et transferts thermiques. Après une première expérience en bureau d’études hydraulique,
+  j’ai intégré le Master Modélisation et Simulation en Mécanique des Fluides et Transferts
+  Thermiques à l’Université Gustave Eiffel, dans le but de renforcer mes compétences en
+  calcul scientifique, modélisation numérique et analyse physique des écoulements.
+
+  Mon profil combine une base solide en hydraulique, une approche d’ingénieur orientée
+  terrain et des compétences avancées en simulation numérique. À travers ce portfolio,
+  je présente des projets CFD et multiphysiques portant sur les écoulements incompressibles,
+  compressibles, multiphasiques, les transferts thermiques, les milieux poreux, l’acoustique
+  numérique et les méthodes numériques.
 
 highlights:
-  - "Modélisation CFD et simulation numérique"
-  - "Maillage et analyse de convergence"
-  - "Post-traitement et interprétation des résultats"
-  - "Communication technique et rédaction de rapports"
+  - "Ingénieur en génie hydraulique spécialisé en CFD"
+  - "Modélisation des écoulements et transferts thermiques"
+  - "Simulation numérique avec ANSYS Fluent, OpenFOAM et COMSOL"
+  - "Méthodes numériques, validation et analyse physique"
+  - "Expérience en bureau d’études et environnement industriel"
