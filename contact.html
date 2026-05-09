@@ -1,0 +1,44 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Contact</p>
+    <h1>Me contacter</h1>
+    <p>
+      Je suis ouvert aux opportunités en ingénierie CFD, simulation numérique,
+      stages, projets techniques et échanges professionnels.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <div class="contact-card">
+
+      <a href="mailto:{{ site.data.profile.email }}">
+        <span>Email</span>
+        {{ site.data.profile.email }}
+      </a>
+
+      <a href="{{ site.data.profile.linkedin }}" target="_blank" rel="noopener">
+        <span>LinkedIn</span>
+        Voir le profil
+      </a>
+
+      <a href="{{ site.data.profile.github }}" target="_blank" rel="noopener">
+        <span>GitHub</span>
+        Voir GitHub
+      </a>
+
+      <a href="{{ site.data.profile.cv | relative_url }}">
+        <span>CV</span>
+        Télécharger le CV
+      </a>
+
+    </div>
+  </div>
+</section>
