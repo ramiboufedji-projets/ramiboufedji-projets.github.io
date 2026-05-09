@@ -1,1 +1,40 @@
 
+- title: "Modélisation CFD"
+  icon: "≈"
+  description: "Définition des hypothèses physiques, des conditions aux limites, des paramètres solveur et de la stratégie numérique."
+  keywords:
+    - RANS
+    - URANS
+    - Modèles de turbulence
+    - Conditions aux limites
+    - Configuration solveur
+
+- title: "Maillage"
+  icon: "▦"
+  description: "Préparation du maillage, stratégie de raffinement, couches limites et analyse de sensibilité au maillage."
+  keywords:
+    - Maillage structuré
+    - Maillage non structuré
+    - Couches limites
+    - y+
+    - Indépendance au maillage
+
+- title: "Post-traitement"
+  icon: "◉"
+  description: "Extraction, visualisation et interprétation des résultats CFD pour l’analyse d’ingénierie."
+  keywords:
+    - Champs de pression
+    - Champs de vitesse
+    - Cartes de température
+    - Coefficients aérodynamiques
+    - Analyse de données
+
+- title: "Analyse d’ingénierie"
+  icon: "Σ"
+  description: "Interprétation claire des résultats numériques, comparaison de configurations et formulation de conclusions techniques."
+  keywords:
+    - Validation
+    - Benchmark
+    - Comparaison de conception
+    - Rapport technique
+    - Recommandations
