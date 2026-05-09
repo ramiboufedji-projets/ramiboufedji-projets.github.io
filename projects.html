@@ -1,0 +1,47 @@
+---
+layout: default
+title: Projets
+permalink: /projects/
+---
+
+{% assign projects = site.projects | sort: "order" %}
+
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Projets</p>
+    <h1>Portfolio de projets CFD</h1>
+    <p>
+      Sélection d’études en simulation numérique, mécanique des fluides,
+      transfert thermique, modélisation de la turbulence et analyse d’ingénierie.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="filter-panel">
+      <input
+        type="search"
+        placeholder="Rechercher par projet, outil, domaine ou mot-clé..."
+        data-project-search
+      >
+
+      <div class="filter-buttons">
+        <button class="filter-button active" data-filter="all">Tous</button>
+        <button class="filter-button" data-filter="aérodynamique">Aérodynamique</button>
+        <button class="filter-button" data-filter="écoulements internes">Écoulements internes</button>
+        <button class="filter-button" data-filter="transfert thermique">Transfert thermique</button>
+        <button class="filter-button" data-filter="turbulence">Turbulence</button>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      {% for project in projects %}
+        {% assign data_tags = project.title | append: ' ' | append: project.domain | append: ' ' | append: project.subtitle | append: ' ' | append: project.tags | append: ' ' | append: project.tools | downcase %}
+        {% include project-card.html project=project data_tags=data_tags %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
