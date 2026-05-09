@@ -1,1 +1,54 @@
 
+{% assign project = include.project %}
+
+<article
+  class="project-card {{ include.extra_class }}"
+  {% if include.data_tags %}
+    data-project-card
+    data-tags="{{ include.data_tags | escape }}"
+  {% endif %}
+>
+  <a href="{{ project.url | relative_url }}" class="project-card-link">
+
+    <div class="project-card-image">
+      {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+      {% else %}
+        <div class="image-placeholder small">
+          <span>CFD</span>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="project-card-body">
+      <div class="project-card-top">
+        <span class="project-domain">{{ project.domain }}</span>
+
+        {% if project.featured %}
+          <span class="featured-badge">Mis en avant</span>
+        {% endif %}
+      </div>
+
+      <h3>{{ project.title }}</h3>
+
+      {% if project.subtitle %}
+        <p>{{ project.subtitle }}</p>
+      {% endif %}
+
+      {% if project.tags %}
+        <div class="tag-list compact">
+          {% for tag in project.tags limit: 4 %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if project.tools %}
+        <div class="tools-line">
+          {{ project.tools | join: " · " }}
+        </div>
+      {% endif %}
+    </div>
+
+  </a>
+</article>
