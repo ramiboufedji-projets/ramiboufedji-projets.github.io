@@ -1,1 +1,65 @@
 
+---
+layout: default
+---
+
+<article class="project-page">
+
+  <section class="project-hero">
+    <div class="container project-hero-grid">
+      <div>
+        <a class="back-link" href="{{ '/projects/' | relative_url }}">← Retour aux projets</a>
+
+        <p class="eyebrow">{{ page.domain }}</p>
+        <h1>{{ page.title }}</h1>
+
+        {% if page.subtitle %}
+          <p class="project-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+
+        <div class="project-meta">
+          {% if page.tools %}
+            <div>
+              <span class="meta-label">Outils</span>
+              <span>{{ page.tools | join: " · " }}</span>
+            </div>
+          {% endif %}
+
+          {% if page.methods %}
+            <div>
+              <span class="meta-label">Méthodes</span>
+              <span>{{ page.methods | join: " · " }}</span>
+            </div>
+          {% endif %}
+        </div>
+
+        {% if page.tags %}
+          <div class="tag-list">
+            {% for tag in page.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="project-hero-card">
+        {% if page.image %}
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        {% else %}
+          <div class="image-placeholder">
+            <span>CFD</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <div class="content-card project-content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+</article>
