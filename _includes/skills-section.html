@@ -1,1 +1,28 @@
 
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Expertise</p>
+      <h2>Compétences CFD et ingénierie</h2>
+      <p>
+        Compétences techniques mises en avant à travers les projets de simulation numérique.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      {% for skill in site.data.skills %}
+        <div class="skill-card">
+          <div class="skill-icon">{{ skill.icon }}</div>
+          <h3>{{ skill.title }}</h3>
+          <p>{{ skill.description }}</p>
+
+          <div class="tag-list compact">
+            {% for keyword in skill.keywords %}
+              <span class="tag">{{ keyword }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
