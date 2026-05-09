@@ -1,1 +1,57 @@
+- title: "Heat Transfer Modeling in Ansys Fluent"
+  provider: "Ansys"
+  type: "Certification logiciel"
+  type_key: "software"
+  date: "Décembre 2025"
+  status: "Obtenue"
+  status_key: "completed"
+  logo: "/assets/images/logos/ANSS_BIG.png"
+  badge: "/assets/images/certifications/ansys-heat-transfer.png"
+  credential_url: "https://innovation.ansys.com/badges/badge/aGVhdC10cmFuc2Zlci1tb2RlbGluZy1pbi1hbnN5cy1mbHVlbnQtMTg4"
+  credential_id: ""
+  description: "Certification Ansys portant sur la modélisation des transferts thermiques dans ANSYS Fluent. Elle couvre la mise en place de modèles thermiques, les conditions aux limites, la résolution numérique et l’analyse des champs de température et de flux thermique."
+  skills:
+    - ANSYS Fluent
+    - Transfert thermique
+    - Convection
+    - Équation de l’énergie
+    - Simulation CFD
 
+- title: "Transient Flow Modeling in Ansys Fluent"
+  provider: "Ansys"
+  type: "Certification logiciel"
+  type_key: "software"
+  date: "Octobre 2025"
+  status: "Obtenue"
+  status_key: "completed"
+  logo: "/assets/images/logos/ANSS_BIG.png"
+  badge: "/assets/images/certifications/ansys-transient-flow.png"
+  credential_url: "https://innovation.ansys.com/badges/badge/dHJhbnNpZW50LWZsb3ctbW9kZWxpbmctaW4tYW5zeXMtZmx1ZW50LTEzMA%3D%3D"
+  credential_id: ""
+  description: "Certification Ansys orientée vers la modélisation des écoulements instationnaires dans ANSYS Fluent. Elle met l’accent sur le choix du pas de temps, la stabilité numérique, les schémas transitoires et l’interprétation temporelle des résultats."
+  skills:
+    - ANSYS Fluent
+    - Écoulements instationnaires
+    - Simulation transitoire
+    - Stabilité numérique
+    - Analyse temporelle
+
+- title: "Turbulence Modelling in Ansys Fluent"
+  provider: "Ansys"
+  type: "Certification logiciel"
+  type_key: "software"
+  date: "Octobre 2025"
+  status: "Obtenue"
+  status_key: "completed"
+  logo: "/assets/images/logos/ANSS_BIG.png"
+  badge: "/assets/images/certifications/ansys-turbulence-modelling.png"
+  credential_url: "https://innovation.ansys.com/badges/badge/dHVyYnVsZW5jZS1tb2RlbGluZy1pbi1hbnN5cy1mbHVlbnQtMTQ2"
+  credential_id: ""
+  description: "Certification Ansys dédiée à la modélisation de la turbulence dans ANSYS Fluent. Elle couvre les principaux modèles de turbulence, le choix des modèles selon les régimes d’écoulement, le traitement proche paroi et l’analyse critique des résultats CFD turbulents."
+  skills:
+    - ANSYS Fluent
+    - Turbulence
+    - RANS
+    - Modèles de turbulence
+    - Traitement proche paroi
+    - Validation CFD
