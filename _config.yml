@@ -1,1 +1,29 @@
 
+title: "CFD Engineering Portfolio"
+description: "Portfolio of CFD projects, numerical simulation studies and engineering analysis."
+url: "https://ramiboufedji-projets.github.io/"
+baseurl: ""
+
+author:
+  name: "Rami Boufedji"
+  email: "ramyboufedji@gmail.com"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
