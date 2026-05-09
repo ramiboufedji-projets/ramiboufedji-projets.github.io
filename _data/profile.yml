@@ -1,1 +1,25 @@
+first_name: "Rami"
+last_name: "Boufrdji"
+role: "Ingénieur CFD"
+headline: "Simulation numérique, mécanique des fluides, transfert thermique et analyse d’ingénierie."
 
+location: "France"
+photo: "/assets/images/profile.jpg"
+cv: "/assets/pdf/CV.pdf"
+
+email: "ramyboufedji@gmail.com
+linkedin: "https://www.linkedin.com/in/rachid-rami-boufedji-529886209/"
+github: "https://github.com/ramiboufedji-projets"
+
+summary: >
+  Je suis ingénieur CFD, avec un intérêt particulier pour la simulation numérique,
+  la mécanique des fluides, le transfert thermique et la résolution de problèmes
+  d’ingénierie. Ce portfolio présente une sélection de projets CFD mettant en avant
+  la méthodologie, les choix de modélisation, l’interprétation des résultats et la
+  communication technique.
+
+highlights:
+  - "Modélisation CFD et simulation numérique"
+  - "Maillage et analyse de convergence"
+  - "Post-traitement et interprétation des résultats"
+  - "Communication technique et rédaction de rapports"
