@@ -33,3 +33,13 @@
   category: "Versioning"
   logo: "assets/images/logos/GitHub_(4).png"
   level: "Organisation, documentation et suivi des projets"
+
+  - name: "Fortran"
+  category: "Programmation scientifique"
+  logo: "assets/images/logos/Fortran_logo.svg"
+  level: "Développement de codes de calcul, résolution numérique et algorithmique scientifique"
+
+- name: "SALOME"
+  category: "Pré-traitement / Maillage"
+  logo: "assets/images/logos/salome.png"
+  level: "Préparation géométrique, génération de maillages et workflows de simulation numérique"
