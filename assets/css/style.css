@@ -1271,4 +1271,43 @@ main {
     align-items: flex-start;
   }
 }
+/* Correction taille logos certifications */
 
+.cert-logo {
+  width: 64px;
+  height: 48px;
+  flex: 0 0 64px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.cert-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+
+  max-width: 48px;
+  max-height: 32px;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.cert-badge-zone img,
+.cert-badge-image {
+  display: block;
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
