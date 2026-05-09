@@ -4,7 +4,7 @@ subtitle: "Étude COMSOL de la propagation d’ondes acoustiques autour d’un b
 order: 10
 featured: false
 domain: "Acoustique numérique"
-image: ""
+image: "assets/images/ projects/frequency-dependent-acoustic-room-model.fr_FR.png"
 tools:
   - COMSOL Multiphysics
   - Méthode des éléments finis
