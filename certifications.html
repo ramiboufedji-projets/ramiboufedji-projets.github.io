@@ -7,11 +7,10 @@ permalink: /certifications/
 <section class="page-hero">
   <div class="container narrow">
     <p class="eyebrow">Certifications</p>
-    <h1>Certifications, badges et formations complémentaires</h1>
+    <h1>Certifications et badges</h1>
     <p>
-      Cette page regroupe mes certifications, badges numériques, MOOC et formations
-      complémentaires liés à la CFD, à la simulation numérique, aux transferts thermiques,
-      à la programmation scientifique et aux outils d’ingénierie.
+      Certifications, badges numériques et formations complémentaires liés à la CFD,
+      à la simulation numérique, aux transferts thermiques et aux outils d’ingénierie.
     </p>
   </div>
 </section>
@@ -23,87 +22,34 @@ permalink: /certifications/
 
       {% for cert in site.data.certifications %}
 
-        <article class="cert-card">
+        {% if cert.credential_url and cert.credential_url != "" %}
+          <a
+            class="cert-project-card"
+            href="{{ cert.credential_url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="Voir la certification {{ cert.title }}"
+          >
+        {% else %}
+          <article class="cert-project-card">
+        {% endif %}
 
-          <div class="cert-card-top">
-
-            <div class="cert-badge-zone">
-
-              {% if cert.credential_url and cert.credential_url != "" %}
-
-                <a
-                  class="cert-badge-link"
-                  href="{{ cert.credential_url }}"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Voir la certification {{ cert.title }}"
-                >
-
-                  {% if cert.badge and cert.badge != "" %}
-                    <img
-                      class="cert-badge-image"
-                      src="{{ cert.badge | relative_url }}"
-                      alt="Badge {{ cert.title }}"
-                    >
-                  {% else %}
-                    <div class="cert-generated-badge cert-type-{{ cert.type_key }}">
-                      <span>{{ cert.provider | slice: 0 }}</span>
-                    </div>
-                  {% endif %}
-
-                </a>
-
+            <div class="cert-project-image">
+              {% if cert.badge and cert.badge != "" %}
+                <img src="{{ cert.badge | relative_url }}" alt="Badge {{ cert.title }}">
               {% else %}
-
-                {% if cert.badge and cert.badge != "" %}
-                  <img
-                    class="cert-badge-image"
-                    src="{{ cert.badge | relative_url }}"
-                    alt="Badge {{ cert.title }}"
-                  >
-                {% else %}
-                  <div class="cert-generated-badge cert-type-{{ cert.type_key }}">
-                    <span>{{ cert.provider | slice: 0 }}</span>
-                  </div>
-                {% endif %}
-
+                <div class="cert-placeholder cert-type-{{ cert.type_key }}">
+                  <span>{{ cert.provider | slice: 0 }}</span>
+                </div>
               {% endif %}
-
             </div>
 
-            <div class="cert-main-info">
+            <div class="cert-project-body">
 
-              <div class="cert-issuer-line">
-
-                <div class="cert-logo">
-                  {% if cert.logo and cert.logo != "" %}
-                    <img
-                      src="{{ cert.logo | relative_url }}"
-                      alt="{{ cert.provider }}"
-                    >
-                  {% else %}
-                    <span>{{ cert.provider | slice: 0 }}</span>
-                  {% endif %}
-                </div>
-
-                <div>
-                  <span class="cert-type cert-type-{{ cert.type_key }}">
-                    {{ cert.type }}
-                  </span>
-
-                  <p class="cert-provider">
-                    {{ cert.provider }}
-                  </p>
-                </div>
-
-              </div>
-
-              <h2>{{ cert.title }}</h2>
-
-              <div class="cert-meta-line">
-                {% if cert.date and cert.date != "" %}
-                  <span>{{ cert.date }}</span>
-                {% endif %}
+              <div class="cert-project-top">
+                <span class="cert-type cert-type-{{ cert.type_key }}">
+                  {{ cert.type }}
+                </span>
 
                 {% if cert.status and cert.status != "" %}
                   <span class="cert-status cert-status-{{ cert.status_key }}">
@@ -112,46 +58,48 @@ permalink: /certifications/
                 {% endif %}
               </div>
 
+              <h2>{{ cert.title }}</h2>
+
+              <div class="cert-provider-row">
+                {% if cert.logo and cert.logo != "" %}
+                  <span class="cert-mini-logo">
+                    <img src="{{ cert.logo | relative_url }}" alt="{{ cert.provider }}">
+                  </span>
+                {% endif %}
+
+                <span>
+                  {{ cert.provider }}
+                  {% if cert.date and cert.date != "" %}
+                    · {{ cert.date }}
+                  {% endif %}
+                </span>
+              </div>
+
+              {% if cert.description and cert.description != "" %}
+                <p>{{ cert.description }}</p>
+              {% endif %}
+
+              {% if cert.skills %}
+                <div class="tag-list compact">
+                  {% for skill in cert.skills %}
+                    <span class="tag">{{ skill }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              {% if cert.credential_url and cert.credential_url != "" %}
+                <div class="cert-card-link-text">
+                  Voir le certificat →
+                </div>
+              {% endif %}
+
             </div>
 
-          </div>
-
-          {% if cert.description and cert.description != "" %}
-            <p class="cert-description">
-              {{ cert.description }}
-            </p>
-          {% endif %}
-
-          {% if cert.skills %}
-            <div class="tag-list compact">
-              {% for skill in cert.skills %}
-                <span class="tag">{{ skill }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-          <div class="cert-actions">
-
-            {% if cert.credential_url and cert.credential_url != "" %}
-              <a
-                class="cert-link"
-                href="{{ cert.credential_url }}"
-                target="_blank"
-                rel="noopener"
-              >
-                Voir le certificat →
-              </a>
-            {% endif %}
-
-            {% if cert.credential_id and cert.credential_id != "" %}
-              <span class="cert-id">
-                ID : {{ cert.credential_id }}
-              </span>
-            {% endif %}
-
-          </div>
-
-        </article>
+        {% if cert.credential_url and cert.credential_url != "" %}
+          </a>
+        {% else %}
+          </article>
+        {% endif %}
 
       {% endfor %}
 
