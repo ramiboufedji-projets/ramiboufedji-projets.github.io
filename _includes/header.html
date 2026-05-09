@@ -1,1 +1,20 @@
 
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">CFD</span>
+      <span class="brand-text">
+        {{ site.data.profile.first_name }} {{ site.data.profile.last_name }}
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}">Accueil</a>
+      <a href="{{ '/projects/' | relative_url }}">Projets</a>
+      <a href="{{ '/about/' | relative_url }}">Profil</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+
+  </div>
+</header>
