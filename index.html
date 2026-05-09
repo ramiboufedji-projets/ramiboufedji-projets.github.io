@@ -3,8 +3,6 @@ layout: default
 title: Accueil
 ---
 
-{% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
-
 <section class="hero">
   <div class="container hero-grid">
 
@@ -78,8 +76,11 @@ title: Accueil
     </div>
 
     <div class="project-carousel" data-carousel-track>
-      {% for project in featured_projects %}
-        {% include project-card.html project=project extra_class="carousel-item" %}
+      {% assign ordered_projects = site.projects | sort: "order" %}
+      {% for project in ordered_projects %}
+        {% if project.featured == true %}
+          {% include project-card.html project=project extra_class="carousel-item" %}
+        {% endif %}
       {% endfor %}
     </div>
 
