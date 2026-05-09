@@ -958,23 +958,31 @@ main {
 }
 
 /* ================================
-   Certifications page
+   Certifications cards
 ================================ */
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.cert-card {
-  border: 1px solid rgba(255, 255, 255, 0.13);
+.cert-project-card {
+  display: block;
+  height: 100%;
+
+  border: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035)),
+    linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.028)),
     var(--bg-card);
+
   border-radius: var(--radius);
-  padding: 26px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -982,218 +990,187 @@ main {
     background 0.22s ease;
 }
 
-.cert-card:hover {
+.cert-project-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.46);
+  border-color: rgba(56, 189, 248, 0.48);
   background:
-    linear-gradient(180deg, rgba(56, 189, 248, 0.095), rgba(255, 255, 255, 0.04)),
+    linear-gradient(180deg, rgba(56,189,248,0.09), rgba(255,255,255,0.035)),
     var(--bg-card);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
 }
 
-.cert-card-top {
-  display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
-  gap: 22px;
-  align-items: start;
-}
-
-/* Zone du badge principal */
-
-.cert-badge-zone {
-  width: 132px;
-  height: 132px;
-  border-radius: 30px;
-  display: grid;
-  place-items: center;
-
+.cert-project-image {
+  aspect-ratio: 16 / 10;
   background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 16rem),
     linear-gradient(180deg, #ffffff, #f3f4f6);
 
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.28),
-    inset 0 0 0 1px rgba(15, 23, 42, 0.06);
-
-  padding: 14px;
-  overflow: hidden;
-}
-
-.cert-badge-link {
-  width: 100%;
-  height: 100%;
   display: grid;
   place-items: center;
-  border-radius: inherit;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease,
-    filter 0.2s ease;
+
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
 }
 
-.cert-badge-link:hover {
-  transform: scale(1.045);
-  opacity: 0.95;
-  filter: saturate(1.08);
-}
+.cert-project-image img {
+  display: block;
 
-.cert-badge-image {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+
+  max-width: 92%;
+  max-height: 92%;
+
   object-fit: contain;
   object-position: center;
 }
 
-/* Badge généré automatiquement si pas d'image */
-
-.cert-generated-badge {
-  width: 94px;
-  height: 94px;
+.cert-placeholder {
+  width: 96px;
+  height: 96px;
   border-radius: 999px;
+
   display: grid;
   place-items: center;
-  font-weight: 900;
-  font-size: 2rem;
+
   color: #ffffff;
-  box-shadow:
-    0 14px 36px rgba(0, 0, 0, 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  font-size: 2rem;
+  font-weight: 900;
 }
 
-.cert-generated-badge span {
-  position: relative;
-  z-index: 2;
+.cert-project-body {
+  padding: 22px;
 }
 
-/* Partie texte */
-
-.cert-main-info {
-  min-width: 0;
-}
-
-.cert-issuer-line {
+.cert-project-top {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
+
+  margin-bottom: 14px;
 }
 
-.cert-logo {
-  width: 58px;
-  height: 46px;
-  flex: 0 0 58px;
+.cert-project-body h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.28rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.cert-provider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.cert-mini-logo {
+  width: 38px;
+  height: 30px;
+  flex: 0 0 38px;
 
   display: grid;
   place-items: center;
 
-  border-radius: 15px;
+  border-radius: 10px;
   background: #ffffff;
-  padding: 8px;
+  padding: 5px;
   overflow: hidden;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.20),
-    inset 0 0 0 1px rgba(15, 23, 42, 0.05);
 }
 
-.cert-logo img {
-  width: 100%;
-  height: 100%;
-  max-width: 44px;
-  max-height: 32px;
+.cert-mini-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 28px;
+  max-height: 20px;
+
   object-fit: contain;
   object-position: center;
 }
 
-.cert-logo span {
-  color: #0b1120;
-  font-weight: 900;
-}
-
-.cert-card h2 {
-  margin: 18px 0 10px;
-  color: var(--text);
-  font-size: 1.45rem;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-}
-
-.cert-provider {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.cert-description {
-  margin: 22px 0 0;
+.cert-project-body p {
+  margin: 16px 0 0;
   color: #d1d5db;
-  font-size: 1rem;
+  font-size: 0.96rem;
 }
 
-/* Ligne date + statut */
+.cert-card-link-text {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
 
-.cert-meta-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  color: var(--muted);
+  color: var(--accent);
+  font-weight: 800;
   font-size: 0.92rem;
 }
 
-/* Badges de type et statut */
+.cert-project-card:hover .cert-card-link-text {
+  color: var(--text);
+}
+
+/* Type badges */
 
 .cert-type,
 .cert-status {
   display: inline-flex;
   align-items: center;
+
   width: fit-content;
   border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.72rem;
+  padding: 5px 9px;
+
+  font-size: 0.68rem;
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-/* Couleurs par type */
-
 .cert-type-software,
-.cert-generated-badge.cert-type-software {
+.cert-placeholder.cert-type-software {
   color: #bae6fd;
   background: rgba(56, 189, 248, 0.14);
   border: 1px solid rgba(56, 189, 248, 0.32);
 }
 
 .cert-type-mooc,
-.cert-generated-badge.cert-type-mooc {
+.cert-placeholder.cert-type-mooc {
   color: #bbf7d0;
   background: rgba(34, 197, 94, 0.14);
   border: 1px solid rgba(34, 197, 94, 0.32);
 }
 
 .cert-type-programming,
-.cert-generated-badge.cert-type-programming {
+.cert-placeholder.cert-type-programming {
   color: #ddd6fe;
   background: rgba(139, 92, 246, 0.15);
   border: 1px solid rgba(139, 92, 246, 0.32);
 }
 
 .cert-type-academic,
-.cert-generated-badge.cert-type-academic {
+.cert-placeholder.cert-type-academic {
   color: #fed7aa;
   background: rgba(249, 115, 22, 0.14);
   border: 1px solid rgba(249, 115, 22, 0.32);
 }
 
 .cert-type-professional,
-.cert-generated-badge.cert-type-professional {
+.cert-placeholder.cert-type-professional {
   color: #fecdd3;
   background: rgba(244, 63, 94, 0.14);
   border: 1px solid rgba(244, 63, 94, 0.32);
 }
 
-/* Couleurs par statut */
+/* Status badges */
 
 .cert-status-completed {
   color: #bbf7d0;
@@ -1213,101 +1190,26 @@ main {
   border: 1px solid rgba(148, 163, 184, 0.28);
 }
 
-/* Actions : lien certificat + ID */
-
-.cert-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.cert-link {
-  color: var(--accent);
-  font-weight: 800;
-  white-space: nowrap;
-}
-
-.cert-link:hover {
-  color: var(--text);
-}
-
-.cert-id {
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
 /* Responsive */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .certifications-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .cert-card {
-    padding: 22px;
-  }
-
-  .cert-card-top {
+  .certifications-grid {
     grid-template-columns: 1fr;
   }
 
-  .cert-badge-zone {
-    width: 122px;
-    height: 122px;
-  }
-
-  .cert-issuer-line {
+  .cert-project-top {
     align-items: flex-start;
-  }
-
-  .cert-actions {
     flex-direction: column;
-    align-items: flex-start;
   }
-}
-/* Correction taille logos certifications */
 
-.cert-logo {
-  width: 64px;
-  height: 48px;
-  flex: 0 0 64px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 14px;
-  background: #ffffff;
-  padding: 8px;
-  overflow: hidden;
-}
-
-.cert-logo img {
-  display: block;
-  width: auto;
-  height: auto;
-
-  max-width: 48px;
-  max-height: 32px;
-
-  object-fit: contain;
-  object-position: center;
-}
-
-.cert-badge-zone img,
-.cert-badge-image {
-  display: block;
-  width: auto;
-  height: auto;
-
-  max-width: 100%;
-  max-height: 100%;
-
-  object-fit: contain;
-  object-position: center;
+  .cert-project-image {
+    aspect-ratio: 16 / 9;
+    padding: 20px;
+  }
 }
