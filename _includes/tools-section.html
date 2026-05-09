@@ -1,0 +1,31 @@
+<section class="section tools-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Outils</p>
+      <h2>Logiciels et environnement technique</h2>
+      <p>
+        Outils utilisés pour la CFD, la CAO, le maillage, le post-traitement et l’analyse de données.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      {% for tool in site.data.tools %}
+        <div class="tool-card">
+          <div class="tool-logo">
+            {% if tool.logo and tool.logo != "" %}
+              <img src="{{ tool.logo | relative_url }}" alt="{{ tool.name }}">
+            {% else %}
+              <span>{{ tool.name | slice: 0 }}</span>
+            {% endif %}
+          </div>
+
+          <div>
+            <h3>{{ tool.name }}</h3>
+            <p class="tool-category">{{ tool.category }}</p>
+            <p>{{ tool.level }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
