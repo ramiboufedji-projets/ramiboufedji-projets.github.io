@@ -1,13 +1,13 @@
 ---
 title: "Résolution d’EDP par éléments finis"
-subtitle: "Formulation faible, méthode de Galerkin et résolution numérique sous COMSOL et Python."
+subtitle: "Formulation faible, méthode de Galerkin et résolution numérique sous COMSOL et MATLAB."
 order: 12
 featured: false
 domain: "Méthodes numériques"
 image: ""
 tools:
   - COMSOL Multiphysics
-  - Python
+  - MATLAB
   - Méthode des éléments finis
 methods:
   - Formulation faible
@@ -17,7 +17,7 @@ methods:
 tags:
   - FEM
   - COMSOL
-  - Python
+  - MATLAB
   - EDP
   - Galerkin
 ---
@@ -26,7 +26,7 @@ tags:
 
 Ce projet porte sur la résolution numérique d’équations aux dérivées partielles en 1D et 2D par la méthode des éléments finis.
 
-L’étude combine formulation variationnelle, implémentation sous COMSOL et développement numérique sous Python.
+L’étude combine formulation variationnelle, implémentation sous COMSOL et développement numérique sous MATLAB.
 
 ## Contexte scientifique
 
@@ -46,7 +46,7 @@ Les objectifs étaient de :
 
 ## Méthodologie
 
-Les équations étudiées sont de type diffusion-réaction. Les cas 1D ont été résolus analytiquement lorsque possible, puis simulés sous COMSOL et Python.
+Les équations étudiées sont de type diffusion-réaction. Les cas 1D ont été résolus analytiquement lorsque possible, puis simulés sous COMSOL et MATLAB.
 
 L’étude a ensuite été étendue à un problème bidimensionnel sur un domaine carré.
 
@@ -75,11 +75,11 @@ Les simulations 2D présentent des champs cohérents et respectent les symétrie
 - Formulation faible
 - Méthode de Galerkin
 - COMSOL Weak Form PDE
-- Python
+- MATLAB
 - Résolution d’EDP
 - Analyse d’erreur
 - Validation analytique
 
 ## Conclusion
 
-Ce projet démontre ma capacité à relier la théorie mathématique des éléments finis à des implémentations numériques concrètes sous COMSOL et Python.
+Ce projet démontre ma capacité à relier la théorie mathématique des éléments finis à des implémentations numériques concrètes sous COMSOL et MATLAB.
