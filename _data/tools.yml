@@ -1,1 +1,39 @@
+- name: "ANSYS Fluent"
+  category: "Solveur CFD"
+  logo: ""
+  level: "Simulation CFD, modélisation de la turbulence et post-traitement"
 
+- name: "OpenFOAM"
+  category: "Solveur CFD"
+  logo: ""
+  level: "Configuration de cas, paramétrage solveur et études paramétriques"
+
+- name: "ParaView"
+  category: "Post-traitement"
+  logo: ""
+  level: "Visualisation des écoulements, contours, lignes de courant et analyse des résultats"
+
+- name: "Python"
+  category: "Programmation"
+  logo: ""
+  level: "Analyse de données, automatisation, tracés et post-traitement"
+
+- name: "MATLAB"
+  category: "Programmation"
+  logo: ""
+  level: "Analyse numérique, visualisation de données et calculs d’ingénierie"
+
+- name: "SolidWorks"
+  category: "CAO"
+  logo: ""
+  level: "Préparation de géométries et modélisation CAO"
+
+- name: "Gmsh"
+  category: "Maillage"
+  logo: ""
+  level: "Génération de maillage et discrétisation de géométries"
+
+- name: "GitHub"
+  category: "Versioning"
+  logo: ""
+  level: "Organisation, documentation et suivi des projets"
