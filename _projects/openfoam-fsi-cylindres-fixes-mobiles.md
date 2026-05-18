@@ -1,7 +1,7 @@
 ---
 title: "CFD et interaction fluide-structure autour de cylindres avec OpenFOAM"
 subtitle: "Workflow complet de simulation d’écoulements transitoires, de vibrations induites par vortex et de comparaison géométrique d’obstacles fixes et mobiles."
-order: 0
+order: 1
 featured: true
 domain: "Interaction fluide-structure"
 image: ""
