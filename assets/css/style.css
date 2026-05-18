@@ -1005,24 +1005,16 @@ main {
   background:
     radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 16rem),
     linear-gradient(180deg, #ffffff, #f3f4f6);
-
-  display: grid;
-  place-items: center;
-
-  padding: 22px;
+  display: block;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
 }
 
 .cert-project-image img {
   display: block;
-
-  width: auto;
-  height: auto;
-
-  max-width: 92%;
-  max-height: 92%;
-
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
