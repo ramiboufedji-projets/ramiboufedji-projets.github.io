@@ -1,7 +1,7 @@
 ---
 title: "Interaction fluide-structure sur une barre élastique"
 subtitle: "Simulation FSI 3D d’un écoulement laminaire autour d’un cylindre prolongé par une structure flexible."
-order: 1
+order: 2
 featured: true
 domain: "Interaction fluide-structure"
 image: ""
