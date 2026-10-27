@@ -4,7 +4,7 @@ subtitle: "Simulation FSI 3D d’un écoulement laminaire autour d’un cylindre
 order: 2
 featured: true
 domain: "Interaction fluide-structure"
-image: ""
+image: "assets/images/ projects/interaction-fluide-structure-fsi.png"
 tools:
   - ANSYS Fluent
   - ANSYS Mechanical
