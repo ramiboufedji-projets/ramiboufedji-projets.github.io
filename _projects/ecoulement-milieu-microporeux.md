@@ -4,7 +4,7 @@ subtitle: "Simulation COMSOL d’un écoulement incompressible dans une microstr
 order: 6
 featured: false
 domain: "Milieux poreux"
-image: ""
+image: "assets/images/ projects/ecoulement-milieu-microporeux.png"
 tools:
   - COMSOL Multiphysics
   - Méthode des éléments finis
