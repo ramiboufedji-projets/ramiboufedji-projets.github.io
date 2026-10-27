@@ -4,7 +4,7 @@ subtitle: "Étude CFD de l’influence du nombre de Rayleigh sur les transferts 
 order: 3
 featured: false
 domain: "Transfert thermique"
-image: ""
+image: "assets/images/ projects/convection-naturelle-turbulente.png"
 tools:
   - ANSYS Fluent
   - CFD
