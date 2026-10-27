@@ -4,7 +4,7 @@ subtitle: "Workflow complet de simulation d’écoulements transitoires, de vibr
 order: 1
 featured: true
 domain: "Interaction fluide-structure"
-image: ""
+image: "assets/images/ projects/openfoam-fsi-cylindres-fixes-mobiles.jpg"
 tools:
   - OpenFOAM
   - pimpleFoam
