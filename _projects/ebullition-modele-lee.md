@@ -4,7 +4,7 @@ subtitle: "Simulation multiphasique transitoire de l’ébullition de l’eau da
 order: 2
 featured: true
 domain: "CFD multiphasique"
-image: ""
+image: "assets/images/ projects/ebullition-modele-lee.png"
 tools:
   - ANSYS Fluent
   - Modèle Mixture
