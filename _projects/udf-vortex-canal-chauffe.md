@@ -4,7 +4,7 @@ subtitle: "Développement d’UDF en C pour analyser les transferts thermiques d
 order: 4
 featured: true
 domain: "CFD avancée"
-image: ""
+image: "assets/images/ projects/udf-vortex-canal-chauffe.png"
 tools:
   - ANSYS Fluent
   - UDF
