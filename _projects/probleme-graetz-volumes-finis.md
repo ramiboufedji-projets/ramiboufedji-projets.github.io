@@ -4,7 +4,7 @@ subtitle: "Étude du développement thermique d’un écoulement laminaire par m
 order: 5
 featured: false
 domain: "Méthodes numériques"
-image: ""
+image: "assets/images/ projects/probleme-graetz-volumes-finis.png"
 tools:
   - Programmation scientifique
   - Méthode des volumes finis
