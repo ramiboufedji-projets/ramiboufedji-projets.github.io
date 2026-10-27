@@ -4,7 +4,7 @@ subtitle: "Simulation COMSOL de la diffusion transitoire et homogénéisation d�
 order: 7
 featured: false
 domain: "Milieux poreux"
-image: ""
+image: "assets/images/ projects/diffusivite-effective-materiaux-poreux.png"
 tools:
   - COMSOL Multiphysics
   - Méthode des éléments finis
