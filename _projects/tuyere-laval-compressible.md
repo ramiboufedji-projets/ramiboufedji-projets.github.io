@@ -4,7 +4,7 @@ subtitle: "Simulation CFD des régimes adapté, sous-détendu et sur-détendu da
 order: 11
 featured: true
 domain: "CFD compressible"
-image: ""
+image: "assets/images/ projects/tuyere-laval-compressible.png"
 tools:
   - ANSYS Fluent
   - ANSYS DesignModeler
