@@ -4,7 +4,7 @@ subtitle: "Comparaison des modèles de rayonnement implémentés dans ANSYS Flue
 order: 9
 featured: false
 domain: "Transfert thermique"
-image: ""
+image: "assets/images/ projects/transferts-radiatifs-fluent.png"
 tools:
   - ANSYS Fluent
   - Modèles radiatifs
