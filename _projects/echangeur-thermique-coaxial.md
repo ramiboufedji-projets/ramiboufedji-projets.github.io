@@ -4,7 +4,7 @@ subtitle: "Simulation CFD d’un échangeur de chaleur en configurations co-cour
 order: 8
 featured: true
 domain: "Transfert thermique"
-image: ""
+image: "assets/images/ projects/echangeur-thermique-coaxial.png"
 tools:
   - ANSYS Fluent
   - ANSYS DesignModeler
