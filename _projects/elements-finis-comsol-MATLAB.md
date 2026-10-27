@@ -4,7 +4,7 @@ subtitle: "Formulation faible, méthode de Galerkin et résolution numérique so
 order: 12
 featured: false
 domain: "Méthodes numériques"
-image: ""
+image: "assets/images/ projects/elements-finis-comsol-MATLAB.png"
 tools:
   - COMSOL Multiphysics
   - MATLAB
