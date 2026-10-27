@@ -4,7 +4,7 @@ subtitle: "Simulation multiphasique avec changement de phase, méthode VOF et va
 order: 14
 featured: true
 domain: "CFD multiphasique"
-image: ""
+image: "assets/images/ projects/dns-evaporation-basilisk.png"
 tools:
   - Basilisk CFD
   - VOF
