@@ -4,7 +4,7 @@ subtitle: "Analyse numérique de schémas pour équations de diffusion, transpor
 order: 13
 featured: false
 domain: "Méthodes numériques"
-image: ""
+image: "assets/images/ projects/diffusion-transport-differences-finies.png"
 tools:
   - Python
   - Calcul scientifique
